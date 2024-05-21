@@ -10,7 +10,7 @@ function Hero() {
             <div className='container grid grid-cols-1 gap-4'>
                 {/* text-content section  */}
                 <div className='text-white'>
-                    <p data-aos="fade-up" >Our packages</p>
+                    <p data-aos="fade-in" >Our packages</p>
                     <p data-aos="fade-up"
                     data-aos-delay="300"
                     className='font-bold text-3xl' >Search Your Destination</p>

@@ -5,18 +5,22 @@ import { Link } from 'react-router-dom'
 
 const NavbarLinks = [
     {
+        id: 1,
         name: "Home",
         link: "/",
     },
     {
+        id: 2,
         name: "About",
         link: "/about",
     },
     {
+        id: 3,
         name: "Blogs",
         link: "/blogs",
     },
     {
+        id: 4,
         name: "Best Places",
         link: "/places",
     },
@@ -44,12 +48,12 @@ function ResponsiveMenu({showMenu, setShowMenu}) {
             <div className='text-black mt-12'>
                 <ul className='space-y-4 text-xl'>
                     {
-                        NavbarLinks.map(({name,link})=>(
+                        NavbarLinks.map(({data})=>(
                             <li>
-                                <Link to={link}
+                                <Link to={data.link}
                                 onClick={()=>setShowMenu(false)}
                              className="mb-5 inline-block">
-                                {name}
+                                {data.name}
                                 </Link>
                             </li>
                         ))
