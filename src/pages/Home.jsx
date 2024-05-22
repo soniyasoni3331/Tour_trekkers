@@ -1,7 +1,11 @@
 import React from 'react';
 import MainVid from "../assets/video/main.mp4"
-import Hero from '../components/Hero/Hero';
-import Places from '../components/Places/Places';
+import Hero from '../components/Hero/Hero.jsx';
+import Places from '../components/Places/Places.jsx';
+import BannerImg from '../components/BannerImg/BannerImg.jsx';
+import Poster from "../assets/women.jpg"
+import Blogs from './Blogs.jsx';
+import Banner from '../components/Banner/Banner.jsx';
 
 function Home() {
   return (
@@ -16,9 +20,12 @@ function Home() {
           >
             <source src={MainVid} type='video/mp4'/>
           </video>
-          <Hero/>
+          <Hero />
         </div>
         <Places />
+        <BannerImg img={Poster}/>
+        <Blogs />
+        <Banner />
       </div>
     </>
   )

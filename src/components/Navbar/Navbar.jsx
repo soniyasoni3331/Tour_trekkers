@@ -3,7 +3,26 @@ import { Link, NavLink } from 'react-router-dom'
 import LogoImg from '../../assets/Logo.png';
 import {FaCaretDown} from "react-icons/fa";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
-import ResponsiveMenu from "./ResponsiveMenu.jsx"
+import ResponsiveMenu from "./ResponsiveMenu.jsx";
+
+// const NavbarLinks = [
+//   {
+//       name: "Home",
+//       link: "/",
+//   },
+//   {
+//       name: "About",
+//       link: "/about",
+//   },
+//   {
+//       name: "Blogs",
+//       link: "/blogs",
+//   },
+//   {
+//       name: "Best Places",
+//       link: "/places",
+//   },
+// ]
 
 const dropdownLinks=[
   {
@@ -42,7 +61,7 @@ function Navbar() {
         <div className='flex justify-between items-center'>
           {/* logo section  */}
           <div className='flex'>
-            <Link to="/" onClick={()=>window.scrollTo(0, 0)}>
+            <Link to="/" >
               <img src={LogoImg} alt="" className='h-16 '/>
             </Link>
           </div>
@@ -50,23 +69,23 @@ function Navbar() {
           <div className='hidden md:block '>
             <ul className='flex items-center gap-6'>
               <li className='py-4'>
-                <NavLink to="/" activeClassName="active" onClick={()=> window.scrollTo(0, 0)}>
+                <NavLink  to="/" className={({ isActive }) => (isActive ? 'active' : undefined)}>
                   Home
                 </NavLink>
               </li>              
               <li className='py-4'>
-                <NavLink to="/blogs" activeClassName="active" 
-                onClick={()=> window.scrollTo(0, 0)}>
+                <NavLink to="/blogs" className={({ isActive }) => (isActive ? 'active' : undefined)} 
+                >
                   Blogs
                 </NavLink>
               </li>
               <li className='py-4'>
-                <NavLink to="/places"  activeClassName="active" onClick={()=> window.scrollTo(0, 0)}>
+                <NavLink  to="/places"  className={({ isActive }) => (isActive ? 'active' : undefined)} >
                   Best Places 
                 </NavLink>
               </li>
               <li className='py-4'>
-                <NavLink to="/about" activeClassName="active" onClick={()=> window.scrollTo(0, 0)}>
+                <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)} >
                   About
                 </NavLink>
               </li>
