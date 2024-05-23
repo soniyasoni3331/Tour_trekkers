@@ -6,12 +6,14 @@ import BannerImg from '../components/BannerImg/BannerImg.jsx';
 import Poster from "../assets/women.jpg"
 import Blogs from './Blogs.jsx';
 import Banner from '../components/Banner/Banner.jsx';
+import Banner2 from '../assets/banner2.jpg';
+import Testimonial from '../components/Testimonial/Testimonial.jsx';
 
 function Home() {
   return (
     <>
       <div>
-        <div className='relative h-[700px]'>
+        <div className='relative h-[700px] '>
           <video 
           autoPlay
           loop
@@ -26,6 +28,9 @@ function Home() {
         <BannerImg img={Poster}/>
         <Blogs />
         <Banner />
+        <BannerImg img={Banner2}/>
+        <Testimonial />
+        
       </div>
     </>
   )

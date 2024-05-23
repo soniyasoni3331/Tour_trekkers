@@ -47,14 +47,13 @@ function Navbar() {
   };
   return (
     <>
-    <div className='fixed top-0 right-0 w-full bg-white text-black shadow-md z-[99999]'>
+    <div className='fixed top-0 left-0 w-full bg-white text-black shadow-md z-[99999]'>
       <div className='bg-gradient-to-r from-primary to-secodary text-white '>
       <div className='container py-[2px]sm:block'>
         <div className="flex justify-between items-center">
           <p>20% off on next booking</p>
           <p>Mobile No, +91 123456789</p>
         </div>
-
       </div>
       </div>
       <div className='container py-3 sm:py-0'>

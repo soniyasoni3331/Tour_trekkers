@@ -12,18 +12,12 @@ const Hero = () => {
             className="text-sm">
               Our Packages
             </p>
-            <p
-            //   data-aos="fade-up"
-            //   data-aos-delay="300"
-              className="font-bold text-3xl"
+            <p  className="font-bold text-3xl"
             >
               Search Your Destination
             </p>
           </div>
-          <div
-            // data-aos="fade-up"
-            // data-aos-delay="600"
-            className="space-y-4 bg-white rounded-md p-4 relative"
+          <div className="space-y-4 bg-white rounded-md p-4 relative"
           >
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-3">
               <div>
