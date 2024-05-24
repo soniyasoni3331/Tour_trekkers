@@ -39,7 +39,7 @@ const dropdownLinks=[
   },
 ]
 
-function Navbar() {
+function Navbar({handleOrderPopup}) {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -116,7 +116,8 @@ function Navbar() {
 
           {/* Book Now button */}
           <div className='flex items-center gap-4'>
-                <button className='bg-gradient-to-r from-primary to-secodary 
+                <button 
+               onClick={()=>handleOrderPopup()} className='bg-gradient-to-r from-primary to-secodary 
                 hover:bg-gradient-to-r hover:from-secondary hover:to-primary transition-all duration-500 text-white px-3 py-1 rounded-full '>Book Now</button>
                 {/* Mobile Hamburger Menu */}
                 <div className='md:hidden

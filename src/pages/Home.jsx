@@ -8,12 +8,28 @@ import Blogs from './Blogs.jsx';
 import Banner from '../components/Banner/Banner.jsx';
 import Banner2 from '../assets/banner2.jpg';
 import Testimonial from '../components/Testimonial/Testimonial.jsx';
+import Popup from '../components/Popup/Popup.jsx';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
+  React.useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 900,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+  const [orderPopup, setOrderPopup] = React.useState(false);
+  const handleOrderPopup = () =>{
+    setOrderPopup(!orderPopup);
+  }
   return (
     <>
       <div>
-        <div className='relative h-[700px] '>
+        <div className='relative h-[650px] '>
           <video 
           autoPlay
           loop
@@ -24,13 +40,14 @@ function Home() {
           </video>
           <Hero />
         </div>
-        <Places />
+        <Places handleOrderPopup={handleOrderPopup}/>
         <BannerImg img={Poster}/>
         <Blogs />
         <Banner />
         <BannerImg img={Banner2}/>
         <Testimonial />
-        
+        <Popup orderPopup={orderPopup}
+        setOrderPopup={setOrderPopup}/>
       </div>
     </>
   )

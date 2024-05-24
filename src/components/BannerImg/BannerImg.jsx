@@ -8,7 +8,7 @@ function BannerImg({img}) {
         height: "400px",
     }
   return (
-    <div className='h-[400px] w-full' style={bgImage}>
+    <div data-aos="zoom-in" className='h-[400px] w-full' style={bgImage}>
 
     </div>
   )

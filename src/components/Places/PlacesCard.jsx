@@ -1,9 +1,10 @@
 import React from 'react'
 import {IoLocationSharp} from "react-icons/io5";
 
-function PlacesCard({img, title, location, description, price, type}) {
+function PlacesCard({img, title, location, description, price, type, handleOrderPopup}) {
   return (
-    <div className='shadow-lg transition-all duration-500 hover:shadow-xl cursor-pointer'>
+    <div className='shadow-lg transition-all duration-500 hover:shadow-xl cursor-pointer'
+    onClick={handleOrderPopup}>
     <div className='overflow-hidden '>
       <img src={img} alt="" className='mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110'  />
     </div>
